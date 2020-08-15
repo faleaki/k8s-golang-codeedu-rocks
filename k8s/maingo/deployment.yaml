@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: maingo
 
-  spec:
-    selector:
-      matchLabels:
+spec:
+  selector:
+    matchLabels:
+      app: maingo
+  template:
+    metadata:
+      labels:
         app: maingo
-    template:
-      metadata:
-        labels:
-          app: maingo
-      spec:
-        containers:
-        - name: maingo
-          image: img-maingo-deployment
-          ports:
-          - containerPort: 8000
+    spec:
+      containers:
+      - name: maingo
+        image: img-maingo-deployment
+        ports:
+        - containerPort: 8000
