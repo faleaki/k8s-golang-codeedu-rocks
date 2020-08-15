@@ -23,8 +23,8 @@ steps:
   args:
     - '-c'
     - |
-      sed 's#img-maingo-deployment#gcr.io/$PROJECT_ID/go-main:$SHORT_SHA#g' ./k8/maingo/deployment.yaml > ./k8/maingo/deployment-new.yaml;
-      cat ./k8/maingo/deployment-new.yaml
+      sed 's#img-maingo-deployment#gcr.io/$PROJECT_ID/go-main:$SHORT_SHA#g' ./k8s/maingo/deployment.yaml > ./k8s/maingo/deployment-new.yaml;
+      cat ./k8s/maingo/deployment-new.yaml
 - id: "Deploying k8s"
   name: 'gcr.io/cloud-builders/kubectl'
   args:
