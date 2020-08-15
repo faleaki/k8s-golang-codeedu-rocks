@@ -13,7 +13,7 @@ metadata:
           app: maingo
       spec:
         containers:
-        -name: maingo
+        - name: maingo
           image: img-maingo-deployment
           ports:
           - containerPort: 8000
