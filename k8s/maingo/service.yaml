@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: app-service
 spec:
-  type: LoadBalance
+  type: LoadBalancer
   ports:
     - port: 8000 
   selector:
